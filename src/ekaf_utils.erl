@@ -57,6 +57,9 @@ atob(S) when is_list(S)->
 atob(B) ->
     B.
 
+binary_to_integer(B) ->
+     list_to_integer(binary_to_list(B)).
+
 btoi(B) when is_binary(B) ->
     binary_to_integer(B);
 btoi(I) when is_list(I)->
